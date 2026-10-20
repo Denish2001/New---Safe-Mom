@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+@theme {
+  /* Sets Poppins as the default font for the entire app */
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Creates a new class: font-heading (uses Montserrat) */
+  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Optional: Apply a base font weight and smooth rendering */
+@layer base {
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+}
