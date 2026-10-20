@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface StepProps {
   number: number;
@@ -35,7 +35,7 @@ export interface PricingTier {
 // ... existing types ...
 
 // --- App / Dashboard Types ---
-export type RiskLevel = "Pending" | "Monitor" | "Low Risk" | "High Risk";
+export type RiskLevel = 'Pending' | 'Monitor' | 'Low Risk' | 'High Risk';
 
 export interface Patient {
   id: string;
@@ -51,7 +51,7 @@ export interface TeamMember {
   id: string;
   name: string;
   email: string;
-  role: "Admin" | "Clinician" | "Viewer" | "Pending";
+  role: 'Admin' | 'Clinician' | 'Viewer' | 'Pending';
 }
 
 export interface Invitee {
@@ -67,7 +67,7 @@ export interface Visit {
   date: string;
   bp: string;
   protein: string;
-  risk: "High" | "Low" | "Monitor";
+  risk: 'High' | 'Low' | 'Monitor';
 }
 
 export interface PatientProfile {

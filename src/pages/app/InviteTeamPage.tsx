@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import type { Invitee } from "../../types";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import type { Invitee } from '../../types';
 
 export const InviteTeamPage: React.FC = () => {
   const navigate = useNavigate();
   const [invitees, setInvitees] = useState<Invitee[]>([
-    { id: "1", email: "grace@hospital.org", role: "Admin" },
-    { id: "2", email: "grace2@hospital.org", role: "Clinician" },
-    { id: "3", email: "", role: "Viewer" },
+    { id: '1', email: 'grace@hospital.org', role: 'Admin' },
+    { id: '2', email: 'grace2@hospital.org', role: 'Clinician' },
+    { id: '3', email: '', role: 'Viewer' },
   ]);
 
   const handleAdd = () => {
     setInvitees([
       ...invitees,
-      { id: Date.now().toString(), email: "", role: "Clinician" },
+      { id: Date.now().toString(), email: '', role: 'Clinician' },
     ]);
   };
 
@@ -26,7 +26,7 @@ export const InviteTeamPage: React.FC = () => {
       {/* Header */}
       <div className="mb-8">
         <button
-          onClick={() => navigate("/app/settings/team")}
+          onClick={() => navigate('/app/settings/team')}
           className="flex items-center gap-2 text-gray-500 hover:text-[#A65E92] font-medium mb-4 transition-colors"
         >
           <svg
@@ -163,13 +163,13 @@ export const InviteTeamPage: React.FC = () => {
           {/* Action Buttons */}
           <div className="flex justify-end gap-3">
             <button
-              onClick={() => navigate("/app/settings/team")}
+              onClick={() => navigate('/app/settings/team')}
               className="px-6 py-3 rounded-xl font-bold text-gray-600 hover:bg-gray-100 transition-colors"
             >
               Cancel
             </button>
             <button
-              onClick={() => navigate("/app/settings/team")}
+              onClick={() => navigate('/app/settings/team')}
               className="bg-[#A65E92] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#8e4d7c] shadow-md transition-colors"
             >
               Send Invites

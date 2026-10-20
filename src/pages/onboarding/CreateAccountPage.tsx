@@ -1,13 +1,13 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FormInput: React.FC<{
   label: string;
   placeholder?: string;
   type?: string;
   fullWidth?: boolean;
-}> = ({ label, placeholder, type = "text", fullWidth }) => (
-  <div className={`mb-4 ${fullWidth ? "w-full" : "w-full md:w-1/2"}`}>
+}> = ({ label, placeholder, type = 'text', fullWidth }) => (
+  <div className={`mb-4 ${fullWidth ? 'w-full' : 'w-full md:w-1/2'}`}>
     <label className="block text-gray-700 mb-1.5 text-sm font-semibold">
       {label}
     </label>
@@ -24,8 +24,8 @@ export const CreateAccountPage: React.FC = () => {
 
   const handleCreateAccount = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Simulating successful account creation...");
-    navigate("/app");
+    console.log('Simulating successful account creation...');
+    navigate('/app');
   };
 
   return (
@@ -112,7 +112,7 @@ export const CreateAccountPage: React.FC = () => {
             </button>
 
             <div className="text-center text-sm text-gray-600">
-              Already have an account?{" "}
+              Already have an account?{' '}
               <Link
                 to="/login"
                 className="text-[#A65E92] font-semibold hover:underline"

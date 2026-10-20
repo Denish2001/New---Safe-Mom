@@ -1,5 +1,5 @@
-import React from "react";
-import type { StepProps } from "../../types";
+import React from 'react';
+import type { StepProps } from '../../types';
 
 export const StepItem: React.FC<StepProps> = ({
   number,

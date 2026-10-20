@@ -1,67 +1,67 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Mock data for the table
 const PATIENTS = [
   {
-    id: "1",
-    name: "Alice Mwangi",
-    initials: "AM",
+    id: '1',
+    name: 'Alice Mwangi',
+    initials: 'AM',
     age: 28,
     gestation: 28,
-    lastVisit: "Today",
-    risk: "High",
-    color: "bg-red-100 text-red-700",
+    lastVisit: 'Today',
+    risk: 'High',
+    color: 'bg-red-100 text-red-700',
   },
   {
-    id: "2",
-    name: "Jesinta Akinyi",
-    initials: "JA",
+    id: '2',
+    name: 'Jesinta Akinyi',
+    initials: 'JA',
     age: 34,
     gestation: 34,
-    lastVisit: "1 week ago",
-    risk: "Monitor",
-    color: "bg-yellow-100 text-yellow-700",
+    lastVisit: '1 week ago',
+    risk: 'Monitor',
+    color: 'bg-yellow-100 text-yellow-700',
   },
   {
-    id: "3",
-    name: "Anabelle Kosgei",
-    initials: "AK",
+    id: '3',
+    name: 'Anabelle Kosgei',
+    initials: 'AK',
     age: 24,
     gestation: 12,
-    lastVisit: "Today",
-    risk: "Low",
-    color: "bg-green-100 text-green-700",
+    lastVisit: 'Today',
+    risk: 'Low',
+    color: 'bg-green-100 text-green-700',
   },
   {
-    id: "4",
-    name: "Lucy Moraa",
-    initials: "LM",
+    id: '4',
+    name: 'Lucy Moraa',
+    initials: 'LM',
     age: 31,
     gestation: 22,
-    lastVisit: "3 days ago",
-    risk: "Low",
-    color: "bg-green-100 text-green-700",
+    lastVisit: '3 days ago',
+    risk: 'Low',
+    color: 'bg-green-100 text-green-700',
   },
   {
-    id: "5",
-    name: "Mary Wambui",
-    initials: "MW",
+    id: '5',
+    name: 'Mary Wambui',
+    initials: 'MW',
     age: 29,
     gestation: 18,
-    lastVisit: "2 weeks ago",
-    risk: "Monitor",
-    color: "bg-yellow-100 text-yellow-700",
+    lastVisit: '2 weeks ago',
+    risk: 'Monitor',
+    color: 'bg-yellow-100 text-yellow-700',
   },
 ];
 
 const RiskBadge = ({ risk }: { risk: string }) => {
   const styles =
-    risk === "High"
-      ? "bg-red-50 text-red-700 border-red-200"
-      : risk === "Monitor"
-        ? "bg-yellow-50 text-yellow-700 border-yellow-200"
-        : "bg-green-50 text-green-700 border-green-200";
+    risk === 'High'
+      ? 'bg-red-50 text-red-700 border-red-200'
+      : risk === 'Monitor'
+        ? 'bg-yellow-50 text-yellow-700 border-yellow-200'
+        : 'bg-green-50 text-green-700 border-green-200';
 
   return (
     <span
@@ -113,28 +113,28 @@ export const AllPatientsPage: React.FC = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
           {
-            label: "Total Patients",
-            value: "142",
-            icon: "M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z",
-            color: "text-gray-900",
+            label: 'Total Patients',
+            value: '142',
+            icon: 'M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z',
+            color: 'text-gray-900',
           },
           {
-            label: "High Risk",
-            value: "11",
-            icon: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z",
-            color: "text-red-600",
+            label: 'High Risk',
+            value: '11',
+            icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
+            color: 'text-red-600',
           },
           {
-            label: "Monitor",
-            value: "23",
-            icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-            color: "text-yellow-600",
+            label: 'Monitor',
+            value: '23',
+            icon: 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',
+            color: 'text-yellow-600',
           },
           {
-            label: "Low Risk",
-            value: "108",
-            icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
-            color: "text-green-600",
+            label: 'Low Risk',
+            value: '108',
+            icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+            color: 'text-green-600',
           },
         ].map((stat, i) => (
           <div

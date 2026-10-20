@@ -1,5 +1,5 @@
-import React from "react";
-import { SettingsLayout, SettingsInput } from "./SettingsLayout";
+import React from 'react';
+import { SettingsLayout, SettingsInput } from './SettingsLayout';
 
 export const FacilityProfilePage: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ export const FacilityProfilePage: React.FC = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          alert("Profile saved (Mock)");
+          alert('Profile saved (Mock)');
         }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 mb-6">

@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
   return (
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
         {/* Right Image Content */}
         <div
           className="w-full lg:w-1/2 relative flex justify-center lg:justify-end animate-fade-in"
-          style={{ animationDelay: "0.2s" }}
+          style={{ animationDelay: '0.2s' }}
         >
           {/* Shape Background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-[#A65E92] rounded-full opacity-90 blur-none"></div>

@@ -1,6 +1,6 @@
-import React from "react";
-import type { PricingTier } from "../../types";
-import { Link } from "react-router-dom";
+import React from 'react';
+import type { PricingTier } from '../../types';
+import { Link } from 'react-router-dom';
 
 export const PricingCard: React.FC<{
   tier: PricingTier;
@@ -10,8 +10,8 @@ export const PricingCard: React.FC<{
     <div
       className={`relative flex flex-col h-full bg-white rounded-3xl transition-all duration-300 ${
         isHighlighted
-          ? "border-2 border-[#A65E92] shadow-2xl scale-105 z-10"
-          : "border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1"
+          ? 'border-2 border-[#A65E92] shadow-2xl scale-105 z-10'
+          : 'border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1'
       }`}
     >
       {/* Badge for highlighted plan */}
@@ -23,7 +23,7 @@ export const PricingCard: React.FC<{
 
       {/* Header */}
       <div
-        className={`p-8 border-b border-gray-100 ${isHighlighted ? "pt-10" : ""}`}
+        className={`p-8 border-b border-gray-100 ${isHighlighted ? 'pt-10' : ''}`}
       >
         <h3 className="text-2xl font-extrabold text-gray-900 mb-2">
           {tier.name}
@@ -75,11 +75,11 @@ export const PricingCard: React.FC<{
       {/* CTA Button */}
       <div className="p-8 mt-auto">
         <Link
-          to={isHighlighted ? "/register" : "/contact"}
+          to={isHighlighted ? '/register' : '/contact'}
           className={`w-full block text-center font-bold text-lg py-3.5 rounded-xl transition-all duration-200 ${
             isHighlighted
-              ? "bg-[#A65E92] text-white hover:bg-[#8e4d7c] shadow-md hover:shadow-lg"
-              : "bg-gray-100 text-gray-900 hover:bg-gray-200"
+              ? 'bg-[#A65E92] text-white hover:bg-[#8e4d7c] shadow-md hover:shadow-lg'
+              : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
           }`}
         >
           {tier.ctaText}

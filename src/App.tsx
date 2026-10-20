@@ -1,40 +1,40 @@
-import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
-import { Footer } from "./components/Footer"; // Ensure Footer is imported
-import { HomePage } from "./pages/HomePage";
-import { LoginPage } from "./pages/auth/LoginPage";
-import { CheckEmailPage } from "./pages/onboarding/CheckEmailPage";
-import { CreateAccountPage } from "./pages/onboarding/CreateAccountPage";
-import { Sidebar } from "./components/app/Sidebar";
-import { DashboardPage } from "./pages/app/DashboardPage";
-import { TeamSettingsPage } from "./pages/app/TeamSettingsPage";
-import { InviteTeamPage } from "./pages/app/InviteTeamPage";
-import { AllPatientsPage } from "./pages/app/AllPatientsPage";
-import { PatientProfilePage } from "./pages/app/PatientProfilePage";
-import { AssessmentWizard } from "./pages/app/assessment/AssessmentWizard";
-import { PlaceholderPage } from "./pages/app/PlaceholderPage";
+import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Navbar } from './components/Navbar';
+import { Footer } from './components/Footer'; // Ensure Footer is imported
+import { HomePage } from './pages/HomePage';
+import { LoginPage } from './pages/auth/LoginPage';
+import { CheckEmailPage } from './pages/onboarding/CheckEmailPage';
+import { CreateAccountPage } from './pages/onboarding/CreateAccountPage';
+import { Sidebar } from './components/app/Sidebar';
+import { DashboardPage } from './pages/app/DashboardPage';
+import { TeamSettingsPage } from './pages/app/TeamSettingsPage';
+import { InviteTeamPage } from './pages/app/InviteTeamPage';
+import { AllPatientsPage } from './pages/app/AllPatientsPage';
+import { PatientProfilePage } from './pages/app/PatientProfilePage';
+import { AssessmentWizard } from './pages/app/assessment/AssessmentWizard';
+import { PlaceholderPage } from './pages/app/PlaceholderPage';
 
 // Settings Pages (assuming these are created based on previous steps)
-import { FacilityProfilePage } from "./pages/app/settings/FacilityProfilePage";
-import { BillingPage } from "./pages/app/settings/BillingPage";
-import { NotificationsPage } from "./pages/app/settings/NotificationsPage";
-import { DataPrivacyPage } from "./pages/app/settings/DataPrivacyPage";
-import { ReferralPage } from "./pages/app/ReferralPage";
+import { FacilityProfilePage } from './pages/app/settings/FacilityProfilePage';
+import { BillingPage } from './pages/app/settings/BillingPage';
+import { NotificationsPage } from './pages/app/settings/NotificationsPage';
+import { DataPrivacyPage } from './pages/app/settings/DataPrivacyPage';
+import { ReferralPage } from './pages/app/ReferralPage';
 
 // Lazy loaded marketing pages
 const ImpactSection = React.lazy(() =>
-  import("./components/impact/ImpactSection").then((module) => ({
+  import('./components/impact/ImpactSection').then((module) => ({
     default: module.ImpactSection,
   })),
 );
 const ContactSection = React.lazy(() =>
-  import("./components/contact/ContactSection").then((module) => ({
+  import('./components/contact/ContactSection').then((module) => ({
     default: module.ContactSection,
   })),
 );
 const PricingSection = React.lazy(() =>
-  import("./components/pricing/PricingSection").then((module) => ({
+  import('./components/pricing/PricingSection').then((module) => ({
     default: module.PricingSection,
   })),
 );

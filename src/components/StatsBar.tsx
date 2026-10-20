@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const StatsBar: React.FC = () => {
   return (
@@ -7,19 +7,19 @@ export const StatsBar: React.FC = () => {
       <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: "radial-gradient(#fff 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
+          backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)',
+          backgroundSize: '20px 20px',
         }}
       ></div>
 
       <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-700/50">
         {[
-          { value: "90%", label: "Model Accuracy" },
+          { value: '90%', label: 'Model Accuracy' },
           {
-            value: "76,000",
-            label: "Deaths/year from hypertensive disorders globally",
+            value: '76,000',
+            label: 'Deaths/year from hypertensive disorders globally',
           },
-          { value: "20%", label: "Cause of Kenyan maternal deaths" },
+          { value: '20%', label: 'Cause of Kenyan maternal deaths' },
         ].map((stat, index) => (
           <div
             key={index}

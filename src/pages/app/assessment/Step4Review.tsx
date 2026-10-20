@@ -1,6 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import type { AssessmentData } from "../../../types";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import type { AssessmentData } from '../../../types';
 
 const ReviewCard = ({
   title,
@@ -40,7 +40,7 @@ const DataPoint = ({
     <span className="block text-gray-500 text-xs mb-1 uppercase tracking-wide">
       {label}
     </span>
-    <span className="font-medium text-gray-900">{value || "--"}</span>
+    <span className="font-medium text-gray-900">{value || '--'}</span>
   </div>
 );
 
@@ -51,10 +51,10 @@ export const Step4Review = ({ data }: { data: AssessmentData }) => {
     <div className="space-y-6 animate-fade-in">
       <ReviewCard title="Patient Demographics" step={1}>
         <DataPoint label="Name" value={data.fullName} />
-        <DataPoint label="Age" value={data.age ? `${data.age} yrs` : "--"} />
+        <DataPoint label="Age" value={data.age ? `${data.age} yrs` : '--'} />
         <DataPoint
           label="Gestational Age"
-          value={data.gestationalAge ? `${data.gestationalAge} wks` : "--"}
+          value={data.gestationalAge ? `${data.gestationalAge} wks` : '--'}
         />
         <DataPoint label="Occupation" value={data.occupation} />
       </ReviewCard>
@@ -65,28 +65,28 @@ export const Step4Review = ({ data }: { data: AssessmentData }) => {
           value={
             data.systolicBP && data.diastolicBP
               ? `${data.systolicBP}/${data.diastolicBP} mmHg`
-              : "--"
+              : '--'
           }
         />
         <DataPoint label="Proteinuria" value={data.proteinuria} />
         <DataPoint
           label="Platelets"
-          value={data.platelets ? `${data.platelets} x10⁹/L` : "--"}
+          value={data.platelets ? `${data.platelets} x10⁹/L` : '--'}
         />
         <DataPoint
           label="Hemoglobin"
-          value={data.hemoglobin ? `${data.hemoglobin} g/dL` : "--"}
+          value={data.hemoglobin ? `${data.hemoglobin} g/dL` : '--'}
         />
       </ReviewCard>
 
       <ReviewCard title="History & Lifestyle" step={3}>
         <DataPoint
           label="Chronic Hypertension"
-          value={data.chronicHypertension ? "Yes" : "No"}
+          value={data.chronicHypertension ? 'Yes' : 'No'}
         />
         <DataPoint
           label="Family History HTN"
-          value={data.familyHistoryHTN ? "Yes" : "No"}
+          value={data.familyHistoryHTN ? 'Yes' : 'No'}
         />
         <DataPoint label="Activity Level" value={data.activityLevel} />
         <DataPoint label="Diet Quality" value={data.dietQuality} />
@@ -113,13 +113,13 @@ export const Step4Review = ({ data }: { data: AssessmentData }) => {
 
       <div className="flex justify-end gap-4 pt-4">
         <button
-          onClick={() => navigate("/app/placeholder")}
+          onClick={() => navigate('/app/placeholder')}
           className="px-6 py-2.5 rounded-lg font-bold text-gray-600 hover:bg-gray-100 border border-gray-300 transition-colors"
         >
           Save Draft
         </button>
         <button
-          onClick={() => navigate("/app/assessment/results")}
+          onClick={() => navigate('/app/assessment/results')}
           className="bg-[#A65E92] text-white px-10 py-3 rounded-lg font-bold hover:bg-[#8e4d7c] shadow-md transition-colors"
         >
           Run Prediction

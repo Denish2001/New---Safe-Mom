@@ -1,6 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import type { AssessmentData } from "../../../types";
+import { useNavigate } from 'react-router-dom';
+import type { AssessmentData } from '../../../types';
 
 // Custom Toggle Component
 const Toggle = ({
@@ -22,10 +21,10 @@ const Toggle = ({
     <button
       type="button"
       onClick={() => onChange(!value)}
-      className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none ${value ? "bg-[#A65E92]" : "bg-gray-200"}`}
+      className={`relative inline-flex h-7 w-12 shrink-0 cursor-pointer items-center justify-center rounded-full transition-colors duration-200 ease-in-out focus:outline-none ${value ? 'bg-[#A65E92]' : 'bg-gray-200'}`}
     >
       <span
-        className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${value ? "translate-x-2.5" : "-translate-x-2.5"}`}
+        className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${value ? 'translate-x-2.5' : '-translate-x-2.5'}`}
       />
     </button>
   </div>
@@ -131,13 +130,13 @@ export const Step3History = ({
 
       <div className="flex justify-end gap-4 mt-10 pt-6 border-t border-gray-100">
         <button
-          onClick={() => navigate("/app/assessment/step-2")}
+          onClick={() => navigate('/app/assessment/step-2')}
           className="px-6 py-2.5 rounded-lg font-bold text-gray-600 hover:bg-gray-100 transition-colors"
         >
           Back
         </button>
         <button
-          onClick={() => navigate("/app/assessment/step-4")}
+          onClick={() => navigate('/app/assessment/step-4')}
           className="bg-[#A65E92] text-white px-8 py-2.5 rounded-lg font-bold hover:bg-[#8e4d7c] shadow-sm transition-colors"
         >
           Continue to Review

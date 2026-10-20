@@ -1,6 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import type { AssessmentData } from "../../../types";
+import { useNavigate } from 'react-router-dom';
+import type { AssessmentData } from '../../../types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const LabInput = ({ label, value, onChange }: any) => (
@@ -161,13 +160,13 @@ export const Step2Vitals = ({
 
       <div className="flex justify-end gap-4 mt-10 pt-6 border-t border-gray-100">
         <button
-          onClick={() => navigate("/app/assessment/step-1")}
+          onClick={() => navigate('/app/assessment/step-1')}
           className="px-6 py-2.5 rounded-lg font-bold text-gray-600 hover:bg-gray-100 transition-colors"
         >
           Back
         </button>
         <button
-          onClick={() => navigate("/app/assessment/step-3")}
+          onClick={() => navigate('/app/assessment/step-3')}
           className="bg-[#A65E92] text-white px-8 py-2.5 rounded-lg font-bold hover:bg-[#8e4d7c] shadow-sm transition-colors"
         >
           Continue to History

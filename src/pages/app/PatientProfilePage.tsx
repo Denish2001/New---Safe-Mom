@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 
 export const PatientProfilePage: React.FC = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ export const PatientProfilePage: React.FC = () => {
       {/* Top Navigation & Actions */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <button
-          onClick={() => navigate("/app/patients")}
+          onClick={() => navigate('/app/patients')}
           className="flex items-center gap-2 text-gray-500 hover:text-[#A65E92] font-medium transition-colors"
         >
           <svg
@@ -31,7 +31,7 @@ export const PatientProfilePage: React.FC = () => {
 
         <div className="flex gap-3">
           <button
-            onClick={() => navigate("/app/placeholder")}
+            onClick={() => navigate('/app/placeholder')}
             className="px-5 py-2.5 rounded-lg border border-gray-300 text-gray-700 font-bold hover:bg-gray-50 transition-colors flex items-center gap-2 text-sm"
           >
             <svg
@@ -286,7 +286,7 @@ export const PatientProfilePage: React.FC = () => {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <button
-                        onClick={() => navigate("/app/placeholder")}
+                        onClick={() => navigate('/app/placeholder')}
                         className="text-[#A65E92] font-bold opacity-0 group-hover:opacity-100 transition-opacity"
                       >
                         View Report
@@ -320,12 +320,12 @@ export const PatientProfilePage: React.FC = () => {
               Clinical Alert
             </h3>
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
-              Patient is currently flagged as{" "}
+              Patient is currently flagged as{' '}
               <strong className="text-red-600">High Risk</strong> for
               preeclampsia based on elevated BP and proteinuria.
             </p>
             <button
-              onClick={() => navigate("/app/referral")}
+              onClick={() => navigate('/app/referral')}
               className="w-full bg-white border border-[#A65E92] text-[#A65E92] font-bold py-2 rounded-lg hover:bg-[#A65E92] hover:text-white transition-colors text-sm"
             >
               Create Referral

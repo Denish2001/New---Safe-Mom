@@ -1,41 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import type { TeamMember } from "../../types";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import type { TeamMember } from '../../types';
 
 const mockTeam: TeamMember[] = [
   {
-    id: "1",
-    name: "Dr. Njoroge (you)",
-    email: "admin@hospital.org",
-    role: "Admin",
+    id: '1',
+    name: 'Dr. Njoroge (you)',
+    email: 'admin@hospital.org',
+    role: 'Admin',
   },
   {
-    id: "2",
-    name: "Grace Kamau",
-    email: "grace@hospital.org · Midwife",
-    role: "Clinician",
+    id: '2',
+    name: 'Grace Kamau',
+    email: 'grace@hospital.org · Midwife',
+    role: 'Clinician',
   },
   {
-    id: "3",
-    name: "Grace Kamau",
-    email: "grace2@hospital.org · Midwife",
-    role: "Clinician",
+    id: '3',
+    name: 'Grace Kamau',
+    email: 'grace2@hospital.org · Midwife',
+    role: 'Clinician',
   },
   {
-    id: "4",
-    name: "Grace Kamau",
-    email: "grace3@hospital.org · Midwife",
-    role: "Pending",
+    id: '4',
+    name: 'Grace Kamau',
+    email: 'grace3@hospital.org · Midwife',
+    role: 'Pending',
   },
 ];
 
 const RoleBadge = ({ role }: { role: string }) => {
   const styles =
-    role === "Admin"
-      ? "bg-purple-50 text-purple-700 border-purple-200"
-      : role === "Clinician"
-        ? "bg-blue-50 text-blue-700 border-blue-200"
-        : "bg-gray-100 text-gray-600 border-gray-200";
+    role === 'Admin'
+      ? 'bg-purple-50 text-purple-700 border-purple-200'
+      : role === 'Clinician'
+        ? 'bg-blue-50 text-blue-700 border-blue-200'
+        : 'bg-gray-100 text-gray-600 border-gray-200';
 
   return (
     <span
@@ -130,7 +130,7 @@ export const TeamSettingsPage: React.FC = () => {
                 <td className="px-6 py-5">
                   <div className="flex items-center gap-3">
                     <RoleBadge role={member.role} />
-                    {member.role === "Pending" && (
+                    {member.role === 'Pending' && (
                       <button className="text-[#A65E92] text-xs font-bold hover:underline">
                         Resend Invite
                       </button>
@@ -138,7 +138,7 @@ export const TeamSettingsPage: React.FC = () => {
                   </div>
                 </td>
                 <td className="px-6 py-5 text-right">
-                  {member.role !== "Admin" ? (
+                  {member.role !== 'Admin' ? (
                     <button className="text-gray-400 hover:text-red-600 transition-colors p-2 rounded-lg hover:bg-red-50">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

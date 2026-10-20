@@ -1,14 +1,13 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import type { AssessmentData } from "../../../types";
+import { useNavigate } from 'react-router-dom';
+import type { AssessmentData } from '../../../types';
 
 // Reusable input component for this file
 const InputField = ({
   label,
   value,
   onChange,
-  type = "text",
-  placeholder = "",
+  type = 'text',
+  placeholder = '',
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }: any) => (
   <div>
@@ -114,7 +113,7 @@ export const Step1Demographics = ({
 
       {/* BMI Display */}
       <div
-        className={`p-4 rounded-xl flex items-center justify-between border ${bmi ? "bg-[#A65E92]/5 border-[#A65E92]/20" : "bg-gray-50 border-gray-200"}`}
+        className={`p-4 rounded-xl flex items-center justify-between border ${bmi ? 'bg-[#A65E92]/5 border-[#A65E92]/20' : 'bg-gray-50 border-gray-200'}`}
       >
         <div className="flex items-center gap-3">
           <svg
@@ -122,7 +121,7 @@ export const Step1Demographics = ({
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke={bmi ? "#A65E92" : "#9CA3AF"}
+            stroke={bmi ? '#A65E92' : '#9CA3AF'}
             className="w-6 h-6"
           >
             <path
@@ -135,18 +134,18 @@ export const Step1Demographics = ({
             Calculated BMI
           </span>
         </div>
-        <span className="text-xl font-bold text-[#A65E92]">{bmi || "--"}</span>
+        <span className="text-xl font-bold text-[#A65E92]">{bmi || '--'}</span>
       </div>
 
       <div className="flex justify-end gap-4 mt-10 pt-6 border-t border-gray-100">
         <button
-          onClick={() => navigate("/app/placeholder")}
+          onClick={() => navigate('/app/placeholder')}
           className="px-6 py-2.5 rounded-lg font-bold text-gray-600 hover:bg-gray-100 transition-colors"
         >
           Save Draft
         </button>
         <button
-          onClick={() => navigate("/app/assessment/step-2")}
+          onClick={() => navigate('/app/assessment/step-2')}
           className="bg-[#A65E92] text-white px-8 py-2.5 rounded-lg font-bold hover:bg-[#8e4d7c] shadow-sm transition-colors"
         >
           Continue to Vitals

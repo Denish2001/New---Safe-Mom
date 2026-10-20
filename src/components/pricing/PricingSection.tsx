@@ -1,41 +1,41 @@
-import React from "react";
-import { PricingCard } from "./PricingCard";
-import type { PricingTier } from "../../types";
+import React from 'react';
+import { PricingCard } from './PricingCard';
+import type { PricingTier } from '../../types';
 
 const PRICING_DATA: PricingTier[] = [
   {
-    name: "Facility starter",
-    description: "Single clinic, up to 500 patients/yr",
-    price: "Free",
-    priceSubtext: "first month",
-    features: ["Risk prediction engine", "Patient records", "Email support"],
-    ctaText: "Start Free Trial",
+    name: 'Facility starter',
+    description: 'Single clinic, up to 500 patients/yr',
+    price: 'Free',
+    priceSubtext: 'first month',
+    features: ['Risk prediction engine', 'Patient records', 'Email support'],
+    ctaText: 'Start Free Trial',
   },
   {
-    name: "Facility pro",
-    description: "Multi-ward, unlimited patients",
-    price: "KSH 5000",
-    priceSubtext: "/month",
+    name: 'Facility pro',
+    description: 'Multi-ward, unlimited patients',
+    price: 'KSH 5000',
+    priceSubtext: '/month',
     features: [
-      "Everything in Starter",
-      "Multi-clinician accounts",
-      "On-site training",
-      "Priority support",
+      'Everything in Starter',
+      'Multi-clinician accounts',
+      'On-site training',
+      'Priority support',
     ],
-    ctaText: "Choose Pro",
+    ctaText: 'Choose Pro',
     highlighted: true,
   },
   {
-    name: "Enterprise & API",
-    description: "Hospital networks, integrators",
-    price: "Custom",
-    priceSubtext: "",
+    name: 'Enterprise & API',
+    description: 'Hospital networks, integrators',
+    price: 'Custom',
+    priceSubtext: '',
     features: [
-      "Everything in Pro",
-      "API access & licensing",
-      "Dedicated account manager",
+      'Everything in Pro',
+      'API access & licensing',
+      'Dedicated account manager',
     ],
-    ctaText: "Contact Sales",
+    ctaText: 'Contact Sales',
   },
 ];
 

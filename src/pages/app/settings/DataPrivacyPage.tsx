@@ -1,5 +1,5 @@
-import React from "react";
-import { SettingsLayout } from "./SettingsLayout";
+import React from 'react';
+import { SettingsLayout } from './SettingsLayout';
 
 export const DataPrivacyPage: React.FC = () => {
   return (

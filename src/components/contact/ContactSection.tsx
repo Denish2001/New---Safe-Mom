@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const FormField: React.FC<{
   label: string;
   type?: string;
   isTextArea?: boolean;
   placeholder?: string;
-}> = ({ label, type = "text", isTextArea = false, placeholder }) => (
+}> = ({ label, type = 'text', isTextArea = false, placeholder }) => (
   <div className="mb-5">
     <label className="block text-gray-700 text-sm font-semibold mb-2">
       {label}

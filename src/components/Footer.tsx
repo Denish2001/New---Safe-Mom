@@ -1,23 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FOOTER_LINKS = {
   product: [
-    { label: "How it works", path: "/#how-it-works" },
-    { label: "Our Impact", path: "/impact" },
-    { label: "Pricing", path: "/pricing" },
-    { label: "Security & Compliance", path: "/#" },
+    { label: 'How it works', path: '/#how-it-works' },
+    { label: 'Our Impact', path: '/impact' },
+    { label: 'Pricing', path: '/pricing' },
+    { label: 'Security & Compliance', path: '/#' },
   ],
   company: [
-    { label: "About Us", path: "/#about" },
-    { label: "Contact", path: "/contact" },
-    { label: "Careers", path: "/#careers" },
-    { label: "Blog", path: "/#blog" },
+    { label: 'About Us', path: '/#about' },
+    { label: 'Contact', path: '/contact' },
+    { label: 'Careers', path: '/#careers' },
+    { label: 'Blog', path: '/#blog' },
   ],
   legal: [
-    { label: "Privacy Policy", path: "/privacy" },
-    { label: "Terms of Service", path: "/terms" },
-    { label: "Data Protection (KDPA)", path: "/data-protection" },
+    { label: 'Privacy Policy', path: '/privacy' },
+    { label: 'Terms of Service', path: '/terms' },
+    { label: 'Data Protection (KDPA)', path: '/data-protection' },
   ],
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface SettingsLayoutProps {
   title: string;
@@ -35,7 +35,7 @@ export const SettingsInput: React.FC<{
   defaultValue?: string;
   type?: string;
   isTextArea?: boolean;
-}> = ({ label, defaultValue, type = "text", isTextArea = false }) => (
+}> = ({ label, defaultValue, type = 'text', isTextArea = false }) => (
   <div className="mb-6">
     <label className="block text-sm font-semibold text-gray-700 mb-2">
       {label}

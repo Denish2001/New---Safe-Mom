@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -14,10 +14,10 @@
 }
 @theme {
   /* Sets Poppins as the default font for the entire app */
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
   /* Creates a new class: font-heading (uses Montserrat) */
-  --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Optional: Apply a base font weight and smooth rendering */

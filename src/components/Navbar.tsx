@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const NAV_LINKS = [
-  { label: "Home", path: "/" },
-  { label: "Our Impact", path: "/impact" },
-  { label: "Reach out to us", path: "/contact" },
-  { label: "Pricing", path: "/pricing" },
+  { label: 'Home', path: '/' },
+  { label: 'Our Impact', path: '/impact' },
+  { label: 'Reach out to us', path: '/contact' },
+  { label: 'Pricing', path: '/pricing' },
 ];
 
 export const Navbar: React.FC = () => {
@@ -22,8 +22,8 @@ export const Navbar: React.FC = () => {
   // Handle scroll for glass effect intensification
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -32,8 +32,8 @@ export const Navbar: React.FC = () => {
       <nav
         className={`pointer-events-auto flex items-center justify-between px-4 md:px-6 py-2.5 w-full max-w-5xl rounded-full transition-all duration-300 border ${
           scrolled || mobileMenuOpen
-            ? "bg-white/80 backdrop-blur-xl shadow-lg shadow-gray-200/50 border-gray-200/60"
-            : "bg-white/40 backdrop-blur-md shadow-sm border-white/40"
+            ? 'bg-white/80 backdrop-blur-xl shadow-lg shadow-gray-200/50 border-gray-200/60'
+            : 'bg-white/40 backdrop-blur-md shadow-sm border-white/40'
         }`}
       >
         {/* Logo (Responsive Scaling) */}
@@ -73,8 +73,8 @@ export const Navbar: React.FC = () => {
               className={({ isActive }) =>
                 `px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                   isActive
-                    ? "bg-white text-[#A65E92] shadow-sm"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-white/50"
+                    ? 'bg-white text-[#A65E92] shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-white/50'
                 }`
               }
             >
@@ -86,10 +86,10 @@ export const Navbar: React.FC = () => {
         {/* Right Side Actions */}
         <div className="flex items-center gap-2 md:gap-3 shrink-0">
           <Link
-            to={location.pathname === "/app" ? "/app" : "/register"}
+            to={location.pathname === '/app' ? '/app' : '/register'}
             className="hidden sm:block bg-[#A65E92] text-white px-4 md:px-5 py-2 text-xs md:text-sm font-bold rounded-full hover:bg-[#8e4d7c] hover:shadow-md transition-all duration-200"
           >
-            {location.pathname === "/app" ? "Dashboard" : "Start Free Trial"}
+            {location.pathname === '/app' ? 'Dashboard' : 'Start Free Trial'}
           </Link>
 
           {/* Mobile Hamburger Button */}
@@ -137,8 +137,8 @@ export const Navbar: React.FC = () => {
       <div
         className={`pointer-events-auto md:hidden w-full max-w-5xl mt-2 overflow-hidden transition-all duration-300 ease-in-out origin-top ${
           mobileMenuOpen
-            ? "opacity-100 scale-y-100 translate-y-0"
-            : "opacity-0 scale-y-95 -translate-y-4 pointer-events-none"
+            ? 'opacity-100 scale-y-100 translate-y-0'
+            : 'opacity-0 scale-y-95 -translate-y-4 pointer-events-none'
         }`}
       >
         <div className="bg-white/95 backdrop-blur-xl border border-gray-200/60 shadow-2xl rounded-2xl p-4 flex flex-col gap-1">
@@ -149,8 +149,8 @@ export const Navbar: React.FC = () => {
               className={({ isActive }) =>
                 `px-4 py-3 rounded-xl text-sm font-bold transition-colors ${
                   isActive
-                    ? "bg-[#A65E92]/10 text-[#A65E92]"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                    ? 'bg-[#A65E92]/10 text-[#A65E92]'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                 }`
               }
             >
@@ -159,12 +159,12 @@ export const Navbar: React.FC = () => {
           ))}
           <div className="h-px bg-gray-100 my-2"></div>
           <Link
-            to={location.pathname === "/app" ? "/app" : "/register"}
+            to={location.pathname === '/app' ? '/app' : '/register'}
             className="bg-[#A65E92] text-white px-4 py-3 text-center text-sm font-bold rounded-xl hover:bg-[#8e4d7c] transition-colors"
           >
-            {location.pathname === "/app"
-              ? "Go to Dashboard"
-              : "Start Free Trial"}
+            {location.pathname === '/app'
+              ? 'Go to Dashboard'
+              : 'Start Free Trial'}
           </Link>
         </div>
       </div>

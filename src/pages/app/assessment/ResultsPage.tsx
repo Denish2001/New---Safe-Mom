@@ -1,6 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import type { AssessmentData } from "../../../types";
+import { useNavigate } from 'react-router-dom';
+import type { AssessmentData } from '../../../types';
 
 export const ResultsPage = ({ data }: { data: AssessmentData }) => {
   const navigate = useNavigate();
@@ -10,7 +9,7 @@ export const ResultsPage = ({ data }: { data: AssessmentData }) => {
       {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <button
-          onClick={() => navigate("/app/assessment/step-4")}
+          onClick={() => navigate('/app/assessment/step-4')}
           className="flex items-center gap-2 text-gray-500 hover:text-[#A65E92] font-medium transition-colors"
         >
           <svg
@@ -30,7 +29,7 @@ export const ResultsPage = ({ data }: { data: AssessmentData }) => {
           Return to Results
         </button>
         <span className="bg-[#A65E92]/10 text-[#A65E92] px-4 py-1.5 rounded-full text-sm font-bold">
-          {data.fullName || "Patient"} · {data.gestationalAge || "--"} wks ·
+          {data.fullName || 'Patient'} · {data.gestationalAge || '--'} wks ·
           Assessed just now
         </span>
       </div>
@@ -93,28 +92,28 @@ export const ResultsPage = ({ data }: { data: AssessmentData }) => {
           <div className="space-y-6">
             {[
               {
-                label: "Blood pressure",
+                label: 'Blood pressure',
                 value: `${data.systolicBP || 150}/${data.diastolicBP || 95} mmHg`,
-                width: "w-full",
-                color: "bg-red-500",
+                width: 'w-full',
+                color: 'bg-red-500',
               },
               {
-                label: "Proteinuria",
-                value: data.proteinuria || "2+",
-                width: "w-4/5",
-                color: "bg-orange-500",
+                label: 'Proteinuria',
+                value: data.proteinuria || '2+',
+                width: 'w-4/5',
+                color: 'bg-orange-500',
               },
               {
-                label: "Family history HTN",
-                value: data.familyHistoryHTN ? "Present" : "Absent",
-                width: "w-1/2",
-                color: "bg-yellow-500",
+                label: 'Family history HTN',
+                value: data.familyHistoryHTN ? 'Present' : 'Absent',
+                width: 'w-1/2',
+                color: 'bg-yellow-500',
               },
               {
-                label: "Fetal heart rate",
-                value: "Normal",
-                width: "w-1/3",
-                color: "bg-green-500",
+                label: 'Fetal heart rate',
+                value: 'Normal',
+                width: 'w-1/3',
+                color: 'bg-green-500',
               },
             ].map((factor, i) => (
               <div key={i}>
@@ -192,7 +191,7 @@ export const ResultsPage = ({ data }: { data: AssessmentData }) => {
       {/* Actions */}
       <div className="flex flex-col md:flex-row justify-center gap-4">
         <button
-          onClick={() => navigate("/app/placeholder")}
+          onClick={() => navigate('/app/placeholder')}
           className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 font-bold px-8 py-3 rounded-xl hover:bg-gray-50 transition-colors"
         >
           <svg
@@ -212,7 +211,7 @@ export const ResultsPage = ({ data }: { data: AssessmentData }) => {
           Print Report
         </button>
         <button
-          onClick={() => navigate("/app/placeholder")}
+          onClick={() => navigate('/app/placeholder')}
           className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 font-bold px-8 py-3 rounded-xl hover:bg-gray-50 transition-colors"
         >
           <svg
@@ -232,7 +231,7 @@ export const ResultsPage = ({ data }: { data: AssessmentData }) => {
           Save to Records
         </button>
         <button
-          onClick={() => navigate("/app/referral")}
+          onClick={() => navigate('/app/referral')}
           className="flex items-center justify-center gap-2 bg-[#A65E92] text-white font-bold px-8 py-3 rounded-xl hover:bg-[#8e4d7c] shadow-md transition-colors"
         >
           Refer Patient

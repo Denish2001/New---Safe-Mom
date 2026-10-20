@@ -1,5 +1,3 @@
-import React from "react";
-
 export const LoginVisual = () => (
   <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 w-full max-w-sm mx-auto">
     <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">

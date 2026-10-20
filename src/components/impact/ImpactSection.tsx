@@ -1,28 +1,28 @@
-import React from "react";
-import { ImpactStatCard } from "./ImpactStatCard";
-import type { ImpactStat } from "../../types";
+import React from 'react';
+import { ImpactStatCard } from './ImpactStatCard';
+import type { ImpactStat } from '../../types';
 
 const STATS_DATA: ImpactStat[] = [
   {
-    value: "342",
-    description: "Maternal deaths per 100,000 live births globally (WHO)",
+    value: '342',
+    description: 'Maternal deaths per 100,000 live births globally (WHO)',
   },
-  { value: "1 in 5,000", description: "Patient-to-clinician ratio in Kenya" },
+  { value: '1 in 5,000', description: 'Patient-to-clinician ratio in Kenya' },
   {
-    value: "90%+",
+    value: '90%+',
     description:
-      "Of Kenyan mothers attend at least one antenatal visit — a window we can act in",
+      'Of Kenyan mothers attend at least one antenatal visit — a window we can act in',
   },
   {
-    value: "6.5%",
-    description: "Of pregnant women affected by preeclampsia in Kenya",
+    value: '6.5%',
+    description: 'Of pregnant women affected by preeclampsia in Kenya',
   },
 ];
 
 const QUOTES_DATA = [
-  "Providers want a tool that reduces workload, not adds to it.",
-  "Diagnosis today is time-consuming and relies heavily on clinical judgment alone.",
-  "No existing tech support to flag at-risk mothers earlier in pregnancy.",
+  'Providers want a tool that reduces workload, not adds to it.',
+  'Diagnosis today is time-consuming and relies heavily on clinical judgment alone.',
+  'No existing tech support to flag at-risk mothers earlier in pregnancy.',
 ];
 
 export const ImpactSection: React.FC = () => {
@@ -43,7 +43,7 @@ export const ImpactSection: React.FC = () => {
         {/* Stats Grid */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24 animate-fade-in"
-          style={{ animationDelay: "0.1s" }}
+          style={{ animationDelay: '0.1s' }}
         >
           {STATS_DATA.map((stat, index) => (
             <ImpactStatCard key={index} stat={stat} />
@@ -51,7 +51,7 @@ export const ImpactSection: React.FC = () => {
         </div>
 
         {/* Clinician Quotes */}
-        <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+        <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             What clinicians told us
           </h2>

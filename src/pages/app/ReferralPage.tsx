@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const ReferralPage: React.FC = () => {
   const navigate = useNavigate();
@@ -65,7 +65,7 @@ export const ReferralPage: React.FC = () => {
                   Urgency
                 </label>
                 <div className="flex gap-3">
-                  {["Routine", "Within 48 hrs", "Immediate"].map((level) => (
+                  {['Routine', 'Within 48 hrs', 'Immediate'].map((level) => (
                     <button
                       key={level}
                       className="flex-1 border border-gray-300 rounded-lg py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50 focus:bg-[#A65E92]/10 focus:border-[#A65E92] focus:text-[#A65E92] transition-colors"
@@ -136,13 +136,13 @@ export const ReferralPage: React.FC = () => {
 
             <div className="space-y-3">
               <button
-                onClick={() => navigate("/app/placeholder")}
+                onClick={() => navigate('/app/placeholder')}
                 className="w-full bg-[#A65E92] text-white font-bold py-3 rounded-xl hover:bg-[#8e4d7c] shadow-sm transition-colors"
               >
                 Send Referral
               </button>
               <button
-                onClick={() => navigate("/app/placeholder")}
+                onClick={() => navigate('/app/placeholder')}
                 className="w-full bg-white text-gray-600 border border-gray-300 font-bold py-3 rounded-xl hover:bg-gray-50 transition-colors"
               >
                 Save as Draft

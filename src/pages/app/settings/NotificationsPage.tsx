@@ -1,5 +1,5 @@
-import React from "react";
-import { SettingsLayout } from "./SettingsLayout";
+import React from 'react';
+import { SettingsLayout } from './SettingsLayout';
 
 const ToggleSwitch: React.FC<{
   label: string;

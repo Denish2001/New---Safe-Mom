@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { LoginVisual, VitalsVisual, RiskScoreVisual } from "./ui/StepVisuals";
+import React, { useState } from 'react';
+import { LoginVisual, VitalsVisual, RiskScoreVisual } from './ui/StepVisuals';
 
 const STEPS = [
   {
-    id: "step-1",
+    id: 'step-1',
     number: 1,
-    title: "Secure Login",
+    title: 'Secure Login',
     description:
-      "Access your clinical dashboard using your secure credentials. No complex setup or new workflow required.",
+      'Access your clinical dashboard using your secure credentials. No complex setup or new workflow required.',
     visual: <LoginVisual />,
     icon: (
       <svg
@@ -27,11 +27,11 @@ const STEPS = [
     ),
   },
   {
-    id: "step-2",
+    id: 'step-2',
     number: 2,
-    title: "Enter Patient Vitals",
+    title: 'Enter Patient Vitals',
     description:
-      "Input the standard vitals and labs you already measure during an antenatal visit. The system supports partial data entry.",
+      'Input the standard vitals and labs you already measure during an antenatal visit. The system supports partial data entry.',
     visual: <VitalsVisual />,
     icon: (
       <svg
@@ -51,11 +51,11 @@ const STEPS = [
     ),
   },
   {
-    id: "step-3",
+    id: 'step-3',
     number: 3,
-    title: "Get Actionable Results",
+    title: 'Get Actionable Results',
     description:
-      "Receive an instant risk score, the top contributing factors, and clear, evidence-based recommendations for the patient.",
+      'Receive an instant risk score, the top contributing factors, and clear, evidence-based recommendations for the patient.',
     visual: <RiskScoreVisual />,
     icon: (
       <svg
@@ -118,28 +118,28 @@ export const HowItWorks: React.FC = () => {
                   onClick={() => setActiveStep(index)}
                   className={`w-full text-left p-6 rounded-2xl transition-all duration-300 border ${
                     isActive
-                      ? "bg-white/10 border-white/20 shadow-2xl scale-[1.02]"
-                      : "bg-transparent border-transparent hover:bg-white/5"
+                      ? 'bg-white/10 border-white/20 shadow-2xl scale-[1.02]'
+                      : 'bg-transparent border-transparent hover:bg-white/5'
                   }`}
                 >
                   <div className="flex items-start gap-4">
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
                         isActive
-                          ? "bg-[#A65E92] text-white"
-                          : "bg-white/10 text-gray-400"
+                          ? 'bg-[#A65E92] text-white'
+                          : 'bg-white/10 text-gray-400'
                       }`}
                     >
                       {step.icon}
                     </div>
                     <div>
                       <h3
-                        className={`text-xl font-bold mb-2 transition-colors ${isActive ? "text-white" : "text-gray-300"}`}
+                        className={`text-xl font-bold mb-2 transition-colors ${isActive ? 'text-white' : 'text-gray-300'}`}
                       >
                         {step.title}
                       </h3>
                       <p
-                        className={`text-sm leading-relaxed transition-colors ${isActive ? "text-gray-300" : "text-gray-500"}`}
+                        className={`text-sm leading-relaxed transition-colors ${isActive ? 'text-gray-300' : 'text-gray-500'}`}
                       >
                         {step.description}
                       </p>

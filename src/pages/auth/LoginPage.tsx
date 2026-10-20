@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
@@ -7,8 +7,8 @@ export const LoginPage: React.FC = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     // TODO: Backend integration - call auth API here
-    console.log("Simulating successful login...");
-    navigate("/app");
+    console.log('Simulating successful login...');
+    navigate('/app');
   };
 
   return (
@@ -96,7 +96,7 @@ export const LoginPage: React.FC = () => {
           </form>
 
           <div className="mt-8 text-center text-sm text-gray-500">
-            Don't have an account?{" "}
+            Don't have an account?{' '}
             <Link
               to="/register"
               className="text-[#A65E92] font-semibold hover:underline"
